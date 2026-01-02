@@ -1,15 +1,24 @@
-import React from "react";
-import NavigationBar from "./components/Navbar.jsx";
+import { useState } from "react";
+import { Container } from "react-bootstrap";
+import NavbarBerita from "./components/Navbar.jsx";
 import NewsList from "./components/NewsList.jsx";
 import Footer from "./components/Footer.jsx";
 
-const App = () => {
+function App ()  {
+    const [search, setSearch] = useState("");
+    const [category, setCategory] = useState("All");
+//
     return (
         <>
-        <NavigationBar />
-           <h1>BERITA TERKINI</h1>
+        <NavbarBerita
+           onSearch={setSearch}
+           onCategory={setCategory}
+        />
         
-        <NewsList />
+        <Container style={{ marginTop: "100px" }}>
+          <NewsList keyword={search} category={category} />
+        </Container>
+
         <Footer />
         </>
     );

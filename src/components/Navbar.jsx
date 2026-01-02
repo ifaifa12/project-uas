@@ -1,28 +1,30 @@
-import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Form, FormControl } from "react-bootstrap";
 
-const NavigationBar = () => {
+function NavbarBerita({ onSearch, onCategory }) {
     return (
-        <Navbar expand="lg" fixed="top" bg="dark" variant="dark">
+        <Navbar bg="light" expand="lg" fixed="top" className="border-bottom">
             <Container>
-                <Navbar.Brand href="home" className="fw-bold">
-                    Liputan6.com
-                    </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-3">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#pendidikan">Pendidikan</Nav.Link>
-                        <Nav.Link href="#lingkungan">Lingkungan</Nav.Link>
-                        <Nav.Link href="#ekonomi">Ekonomi</Nav.Link>
-                        <Nav.Link href="#olahraga">Olahraga</Nav.Link>
-                        <Nav.Link href="#budaya">Budaya</Nav.Link>
-                        <Nav.Link href="#penyambutan-valen">Penyambutan Valen</Nav.Link>
+                <Navbar.Brand className="fw-bold text-danger">Liputan6.com</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbar-content" />
+                <Navbar.Collapse id="navbar-content">
+                    <Nav className="me-auto">
+                        <Nav.Link onClick={() => onCategory("All")}>Beranda</Nav.Link>
+                        <Nav.Link onClick={() => onCategory("Nasional")}>Nasional</Nav.Link>
+                        <Nav.Link onClick={() =>onCategory("Teknologi")}>Teknologi</Nav.Link>
+                        <Nav.Link onClick={() => onCategory("Olahraga")}>Olahraga</Nav.Link>
                     </Nav>
+                    <Form className="d-flex">
+                      <FormControl
+                        type="search"
+                        placeholder="Telusuri berita"
+                        className="me-2"
+                        onChange={(e) => onSearch(e.target.value)}
+                    />
+                  </Form> 
                 </Navbar.Collapse>
             </Container>
         </Navbar>
     );
-};
+}
 
-export default NavigationBar;
+export default NavbarBerita;
