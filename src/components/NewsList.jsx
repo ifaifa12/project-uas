@@ -55,28 +55,23 @@ const NewsList = () => {
 
     return (
         <Container className="mt-4">
-            {["Pendidikan", "Olahraga", "Lingkungan", "Ekonomi", "Olahraga", "Budaya", "Penyambutan Valen"].map((cat) =>(
-                <div key={cat} id={cat.toLowerCase()} className="mb-5">
-                    <h4 className="section-title">{cat}</h4>
-                    <Row>
-                      {newsData
-                      .filter((news) => news.category === cat)
-                      .map((news) => (
-                       <Col md={4} key={news.id} className="mb-4">
+            <Row>
+               {newsData.map((news) => (
+                 <Col md={4} className="mb-4" key={news.id}>
                     <Card>
-                        <Card.Img src={news.image} />
+                      <Card.Img variant="top" src={news.image} />
                         <Card.Body>
                             <Card.Title>{news.title}</Card.Title>
-                             <small className="text-muted">{news.date}</small>
+                            <Card.Text>
+                             <small>{news.date} | {news.category}</small>
+                            </Card.Text>
                             <Card.Text>{news.content.substring(0, 100)}.</Card.Text>
                         </Card.Body>
                     </Card>
                     </Col>
                   ))}
             </Row>
-            </div>
-                ))}
-        </Container>
+            </Container>
     );
 };
 
