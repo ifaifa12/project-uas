@@ -6,8 +6,16 @@ import Footer from "./components/Footer.jsx";
 const App = () => {
     return (
         <>
-        <h1>BERITA TERKINI</h1>
         <NavigationBar />
+
+        {/* HERO / HEADER */}
+        <div className="hero">
+            <div className="hero-text">
+              <h1>BERITA TERKINI</h1>
+              <p>Update Nasional & Internal</p>
+             </div>
+           </div>
+
         <NewsList />
         <Footer />
         </>

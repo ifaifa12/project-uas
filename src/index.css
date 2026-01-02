@@ -1,14 +1,61 @@
 body {
   background-color: #f8f9fa;
+  font-family: Sego UI , Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background-image: url ("https://www.liputan6.com/assets/images/liputan6.og.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  position: relative;
+  display: flex;
+  align-self: center;
+}
+
+ .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
+/* SECTION TITLE */
+.section-title {
+  font-weight: 700;
+  border-left: 5px solid #e60000;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
 
+/* FOOTER */
 footer {
-  position: relative;
-  bottom: 0;
-  widht: 100%
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  width: 100px;
+  margin-top: 40px;
 }
+
+
