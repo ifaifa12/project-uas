@@ -1,25 +1,18 @@
 body {
   background-color: #f8f9fa;
-  padding-top: 70px;
 }
 
-.card-title {
-  font-size: 1.2rem;
+.populer-box {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
 }
 
-.headline {
-  height: 400px;
+.populer-list li {
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
-.headline .card-text {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.headline .card-text {
-  font-size: 1.1rem;
-}
-
-footer {
-  width: 80%;
+.h6 {
+  line-height: 1.3;
 }

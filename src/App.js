@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import NavbarBerita from "./components/Navbar.jsx";
 import NewsList from "./components/NewsList.jsx";
 import Footer from "./components/Footer.jsx";
@@ -16,8 +16,25 @@ function App ()  {
         />
         
         <Container style={{ marginTop: "100px" }}>
-          <NewsList keyword={search} category={category} />
-        </Container>
+            <Row>
+                <Col md={8}>
+                  <NewsList keyword={search} category={category} />
+        </Col>
+
+        <Col md={4}>
+         <div className="popular-box">
+            <h5 className="fw-bold mb-3">Terpopuler</h5>
+            <ol className="popular-list">
+                <li>Harga BBM Naik Awal 2026</li>
+                <li>Timnas Indonesia Lolos Final</li>
+                <li>IHSG Dibuka Menguat</li>
+                <li>Teknologi Al di Sekolah</li>
+                <li>Wisata Alam Tren 2026</li>
+            </ol>
+          </div>
+        </Col>
+    </Row>
+</Container>
 
         <Footer />
         </>

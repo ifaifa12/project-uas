@@ -64,34 +64,39 @@ import { Row, Col, Card } from "react-bootstrap";
             return searchMatch && categoryMatch;
         });
 
-        const headline= filtered.length > 0 ? filtered[0] : newsData[0];
+        if (filtered.length === 0) return <p>Berita tidak ditemukan</p>;
+
+        const headline = filtered[0];
 
     return ( 
         <>
-        <Card className="mb-4 text-white headline">
+        <Card className="mb-4 border-0">
             <Card.Img src={headline.image} />
-                 <Card.ImgOverlay className="d-flex flex-column justify-content-end bg-dark bg-opacity-50">
+                 <Card.ImgOverlay className="bg-dark bg-opacity d-flex flex-column justify-content-end text-white">
                     <small>{headline.source} . {headline.time}</small>
-                      <Card.Title>{newsData.title}</Card.Title>
-                      <Card.Text>{newsData.summary}</Card.Text>
+                      <h3 className="fw-bold">{headline.title}</h3>
+                      <p>{headline.summary}</p>
                   </Card.ImgOverlay>
                 </Card>
-                        <Row>
-                            {filtered.slice(1).map(news => (
-                             <Col md={4} key={news.id}>
-                               <Card className="mb-4 shadow-sm">
-                                 <Card.Img variant="top" src={news.image} />
-                                 <Card.Body>
-                                    <small className="text-muted">{news.source} . {news.time}</small>
-                                    <Card.Title>{news.title}</Card.Title>
-                                    <Card.Text>{news.summary}</Card.Text>
-                                 </Card.Body>
-                              </Card>
-                            </Col>
-                          ))}
-                       </Row>
-                    </>
-                 );
-              };
 
+                {filtered.slice(1).map((news) => (
+                    <Card key={news.id} className="mb-3 border-0">
+                        <Row className="g-2">
+                            <Col xs={4}>
+                              <img src={news.image} className="img-fluid rounded" alt={newa.title} />
+                              </Col>
+                              <Col xs={8}>
+                                <small className="text-muted">
+                                    {news.source} . {news.time}
+                                </small>
+                                <h6 className="fw-bold mb-1">{news.title}</h6>
+                                <h6 className="mb-0 small">{news.summary}</h6>
+                              </Col>
+                        </Row>
+                    </Card>
+                ))}
+            </>
+        );
+    }
+            
 export default NewsList;
