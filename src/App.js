@@ -22,12 +22,24 @@ function App ()  {
          <div className="popular-box">
             <h5 className="fw-bold mb-3">Terpopuler</h5>
             <ol className="popular-list">
-                <li>Harga BBM Naik Awal 2026</li>
-                <li>Kedatangan Valen di Gedung Negara Grahadi Surabaya</li>
-                <li>Teknologi Al Mulai Diterapkan di Sekolah</li>
-                <li>Timnas Indonesia Lolos Final</li>
-                <li>IHSG Dibuka Menguat</li>
-                <li>Wisata Alam Tren 2026</li>
+                <li>
+                    <a href="#news-1">Harga BBM Naik Awal 2026</a>
+                </li>
+                <li>
+                    <a href="#news-2">Kedatangan Valen di Gedung Negara Grahadi Surabaya</a>
+                </li>
+                <li>
+                    <a href="#news-3">Teknologi Al Mulai Diterapkan di Sekolah</a>
+                </li>
+                <li>
+                    <a href="#news-4">Timnas Indonesia Lolos Final</a>
+                </li>
+                <li>
+                    <a href="#news-5">IHSG Dibuka Menguat</a>
+                </li>
+                <li>
+                    <a href="#news-6">Wisata Alam Tren 2026</a>
+                </li>
             </ol>
           </div>
         </Col>

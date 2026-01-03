@@ -73,7 +73,7 @@ import { Row, Col, Card } from "react-bootstrap";
 
     return ( 
         <>
-        <Card className="headline-card mb-4">
+        <Card id={'news-${headline.id}'} className="mb-4 border-0">
             <Row className="g-0">
                 <Col md={6}>
                   <img src={headline.image} className="headline-img" />
@@ -89,7 +89,7 @@ import { Row, Col, Card } from "react-bootstrap";
     </Card>
 
     {filtered.slice(1).map((news) => (
-        <Card key={news.id} className="mb-3 border-0">
+        <Card key={news.id} id={'news-${news.id}'}className="mb-3 border-0">
             <Row className="g-3">
                 <Col xs={4}>
                     <img src={news.image} className="news-thumb" alt={news.title} />
