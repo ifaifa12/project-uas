@@ -2,31 +2,39 @@ body {
   background-color: #f8f9fa;
 }
 
-.card-title {
-  font-size: 1.2rem;
+.headline-card {
+  border: none;
+  background: #fff;
+}
+
+.headline-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.news-item {
+  border: none;
+  background: #fff;
+  padding: 8px; 
+}
+
+.news-thumb {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.popular-list li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
 .footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-.headline-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0)
-  );
-  color: white;
-  padding: 20px;
-}
-
-.headline-overlay h3 {
-  font-size: 1.6rem;
-  line-height: 1.3;
-}
-
-.headline-overlay p {
-  font-size: 0.95rem;
+  margin-top: 400%;
+  padding: 16px;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #ddd;
 }

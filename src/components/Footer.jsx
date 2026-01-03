@@ -1,6 +1,6 @@
 function Footer()  {
     return (
-        <footer className="bg-light text-center text-muted p-3 border-top">
+        <footer className="footer">
                 @ 2026 Liputan6.com. 
         </footer>
     );

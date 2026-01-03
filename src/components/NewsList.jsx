@@ -59,44 +59,53 @@ import { Row, Col, Card } from "react-bootstrap";
 
     function NewsList({ keyword, category }){
         const filtered = newsData.filter(news => {
-            const searchMatch= news.title.toLowerCase().includes(keyword.toLowerCase());
-            const categoryMatch= category === "All" || news.category === category;
-            return searchMatch && categoryMatch;
+            const searchMatch= news.title
+            .toLowerCase()
+            .includes(keyword.toLowerCase());
+        const categoryMatch= 
+            category === "All" || news.category === category;
+        return searchMatch && categoryMatch;
         });
 
-        if (filtered.length === 0) return <p>Berita ditemukan</p>;
+        if (filtered.length === 0) return <p>Berita tidak ditemukan</p>;
 
         const headline = filtered[0];
 
     return ( 
         <>
-        <Card className="mb-4 border-0">
-            <Card.Img src={headline.image} />
-                 <Card.ImgOverlay className="headline-overlay d-flex flex-colom justfy-content-end">
-                    <small>{headline.source} . {headline.time}</small>
-                      <h3 className="fw-bold">{headline.title}</h3>
-                      <p>{headline.summary}</p>
-                  </Card.ImgOverlay>
-                </Card>
+        <Card className="headline-card mb-4">
+            <Row className="g-0">
+                <Col md={6}>
+                  <img src={headline.image} className="headline-img" />
+                </Col>
+                <Col md={6} className="p-3">
+                    <h4 className="fw-bold">{headline.title}</h4>
+                    <p className="text-muted">{headline.summary}</p>
+                  <small className="text-secondary">
+                    {headline.source} . {headline.time}
+                </small>
+            </Col>
+        </Row>
+    </Card>
 
-                {filtered.slice(1).map((news) => (
-                    <Card key={news.id} className="mb-3 border-0">
-                        <Row className="g-2">
-                            <Col xs={4}>
-                              <img src={news.image} className="img-fluid rounded" />
-                              </Col>
-                              <Col xs={8}>
-                                <small className="text-muted">
-                                    {news.source} . {news.time}
-                                </small>
-                                <h6 className="fw-bold mb-1">{news.title}</h6>
-                                <h6 className="mb-0 small">{news.summary}</h6>
-                              </Col>
-                        </Row>
-                    </Card>
-                ))}
-            </>
-        );
-    }
+    {filtered.slice(1).map((news) => (
+        <Card key={news.id} className="mb-3 border-0">
+            <Row className="g-3">
+                <Col xs={4}>
+                    <img src={news.image} className="news-thumb" alt={news.title} />
+                </Col>
+                <Col xs={8}>
+                    <h6 className="fw-bold mb-1">{news.title}</h6>
+                    <p className="small text-muted mb-1">{news.summary}</p>
+                    <small className="text-secondary">
+                        {news.source} &bull; {news.time}
+                    </small>
+                </Col>
+            </Row>
+        </Card>
+     ))}
+    </>
+ );
+}
             
 export default NewsList;

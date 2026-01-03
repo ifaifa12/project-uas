@@ -10,16 +10,13 @@ function App ()  {
 //
     return (
         <>
-        <NavbarBerita
-           onSearch={setSearch}
-           onCategory={setCategory}
-        />
+        <NavbarBerita onSearch={setSearch} onCategory={setCategory} />
         
-        <Container style={{ marginTop: "100px" }}>
+        <Container style={{ marginTop: "90px" }}>
             <Row>
                 <Col md={8}>
                   <NewsList keyword={search} category={category} />
-        </Col>
+            </Col>
 
         <Col md={4}>
          <div className="popular-box">

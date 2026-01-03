@@ -2,12 +2,14 @@ import { Navbar, Nav, Container, Form, FormControl } from "react-bootstrap";
 
 function NavbarBerita({ onSearch, onCategory }) {
     return (
-        <Navbar bg="white" fixed="top" className="border-bottom">
+        <Navbar bg="white" expand="lg" fixed="top" className="border-bottom">
             <Container>  
-                <Navbar.Brand className="fw-bold text-danger fs-4">
+                <Navbar.Brand className="fw-bold text-danger ">
                     Liputan6.com
                     </Navbar.Brand>
-                
+                    
+                    <Navbar.Toggle />
+                    <Navbar.Collapse>
                     <Nav className="me-auto">
                         <Nav.Link onClick={() => onCategory("Home")}>Home</Nav.Link>
                         <Nav.Link onClick={() => onCategory("All")}>Beranda</Nav.Link>
@@ -19,10 +21,12 @@ function NavbarBerita({ onSearch, onCategory }) {
 
                     <Form className="d-flex">
                       <FormControl
-                        placeholder="Cari berita"
+                        type="search"
+                        placeholder="Cari berita..."
                         onChange={(e) => onSearch(e.target.value)}
                     />
                   </Form> 
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     );
