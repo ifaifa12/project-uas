@@ -1,7 +1,7 @@
 function Footer()  {
     return (
         <footer className="footer">
-                @ 2026 Liputan6.com. 
+                 @ 2026 Liputan6.com. 
         </footer>
     );
 };

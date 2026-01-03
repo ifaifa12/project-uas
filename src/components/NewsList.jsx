@@ -102,9 +102,9 @@ import { Row, Col, Card } from "react-bootstrap";
     </Card>
 
     {filtered.slice(1).map((news) => (
-        <Card id={`news-${headline.id}`} className="mb-3 border-0">
-            <Row className="g-3">
-                <Col xs={4}>
+        <Card key={news.id} className="news-item border-0">
+            <Row className="g-3 align-items-start">
+                <Col xs={4} className="news-img-col">
                     <a href={`#news-${news.id}`}>
                     <img src={news.image} className="news-thumb" alt={news.title} />
                     </a>
