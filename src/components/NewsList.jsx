@@ -58,26 +58,39 @@ import { Row, Col, Card } from "react-bootstrap";
     ];
 
     function NewsList({ keyword, category }){
-        const filtered = newsData.filter(news => {
-            const searchMatch= news.title
-            .toLowerCase()
-            .includes(keyword.toLowerCase());
+        const filtered = newsData.filter((news) => {
+            const keywordLower= keyword.toLowerCase().trim();
+
+            const searchMatch =
+            news.title.toLowerCase().includes(keywordLower) ||
+            news.summary.toLowerCase().includes(keywordLower);
+
         const categoryMatch= 
             category === "All" || news.category === category;
-        return searchMatch && categoryMatch;
+        
+        if (keywordLower === ""){
+            return categoryMatch;
+        }
+        return categoryMatch && searchMatch;
         });
 
-        if (filtered.length === 0) return <p>Berita tidak ditemukan</p>;
+        if (filtered.length === 0 ) {
+            return (
+            <p className="text-muted">
+                Tidak ada berita untuk kata <b>"{keyword}"</b></p>
+        );
+    }
 
         const headline = filtered[0];
 
     return ( 
         <>
-        <Card id={'news-${headline.id}'} className="mb-4 border-0">
+        <Card id={`news-${headline.id}`} className="mb-3 border-0 news-item">
             <Row className="g-0">
                 <Col md={6}>
-                  <img src={headline.image} className="headline-img" />
+                  <img src={headline.image} className="headline-img alt={headline.title}" />
                 </Col>
+
                 <Col md={6} className="p-3">
                     <h4 className="fw-bold">{headline.title}</h4>
                     <p className="text-muted">{headline.summary}</p>
@@ -89,14 +102,21 @@ import { Row, Col, Card } from "react-bootstrap";
     </Card>
 
     {filtered.slice(1).map((news) => (
-        <Card key={news.id} id={'news-${news.id}'}className="mb-3 border-0">
+        <Card id={`news-${headline.id}`} className="mb-3 border-0">
             <Row className="g-3">
                 <Col xs={4}>
+                    <a href={`#news-${news.id}`}>
                     <img src={news.image} className="news-thumb" alt={news.title} />
+                    </a>
                 </Col>
+              
                 <Col xs={8}>
-                    <h6 className="fw-bold mb-1">{news.title}</h6>
+                    <a href={`#news-${news.id}`} className="news-link">
+                        <h6 className="fw-bold mb-1">{news.title}</h6>
+                    </a>
+
                     <p className="small text-muted mb-1">{news.summary}</p>
+
                     <small className="text-secondary">
                         {news.source} &bull; {news.time}
                     </small>

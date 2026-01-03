@@ -2,7 +2,7 @@ import { Navbar, Nav, Container, Form, FormControl } from "react-bootstrap";
 
 function NavbarBerita({ onSearch, onCategory }) {
     return (
-        <Navbar bg="white" expand="lg" fixed="top" className="border-bottom">
+        <Navbar expand="lg" fixed="top" className="navbar-news">
             <Container>  
                 <Navbar.Brand className="fw-bold text-danger ">
                     Liputan6.com
@@ -10,7 +10,7 @@ function NavbarBerita({ onSearch, onCategory }) {
                     
                     <Navbar.Toggle />
                     <Navbar.Collapse>
-                    <Nav className="me-auto">
+                    <Nav className="me-auto nav-news">
                         <Nav.Link onClick={() => onCategory("Home")}>Home</Nav.Link>
                         <Nav.Link onClick={() => onCategory("All")}>Beranda</Nav.Link>
                         <Nav.Link onClick={() => onCategory("Nasional")}>Nasional</Nav.Link>
