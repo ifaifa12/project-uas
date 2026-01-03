@@ -9,10 +9,12 @@ function NavbarBerita({ onSearch, onCategory }) {
                     </Navbar.Brand>
                 
                     <Nav className="me-auto">
+                        <Nav.Link onClick={() => onCategory("Home")}>Home</Nav.Link>
                         <Nav.Link onClick={() => onCategory("All")}>Beranda</Nav.Link>
                         <Nav.Link onClick={() => onCategory("Nasional")}>Nasional</Nav.Link>
-                        <Nav.Link onClick={() =>onCategory("Teknologi")}>Teknologi</Nav.Link>
+                        <Nav.Link onClick={() => onCategory("Teknologi")}>Teknologi</Nav.Link>
                         <Nav.Link onClick={() => onCategory("Olahraga")}>Olahraga</Nav.Link>
+                        <Nav.Link onClick={() => onCategory("Penyambutan Valen")}>Penyambutan Valen</Nav.Link>
                     </Nav>
 
                     <Form className="d-flex">

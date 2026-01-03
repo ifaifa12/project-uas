@@ -5,55 +5,55 @@ import { Row, Col, Card } from "react-bootstrap";
             id: 1,
             title: "Harga BBM Naik Awal Tahun 2026",
             summary: "Pemerintah menjelaskan alasan penyesuaian harga BMM.",
-            source: "Liputan6",
-            time: "2 jam lalu",
             category: "Nasional",
             image: "https://tse1.mm.bing.net/th/id/OIP._xYjH-g7ns6MmJ4iekxfCwHaDt?pid=Api&P=0&h=180",
+            source: "Liputan6",
+            time: " 2 jam lalu",
         },
         {
           id: 2,
             title: "Teknologi Ramah Lingkungan di Indonesia",
             summary: "Teknologi Al mulai diterapkan di sekolah",
-            source: "Liputan6",
-            time: "5 jam lalu",
             category: "Teknologi",
             image: "https://tse1.mm.bing.net/th/id/OIP.CgO_Jqsf0FlhSymboQhxMQHaE7?pid=Api&P=0&h=180",
+            source: "Liputan6",
+            time: "5 jam lalu",
         },
         {
             id: 3,
             title: "Timnas Indonesia Lolos Final",
             summary: "Kemenangan dramastis di semifinal",
-            source: "Liputan6",
-            time: "1 hari lalu",
             category: "Olahraga",
             image: "https://tse3.mm.bing.net/th/id/OIP.ehgdAR3Nqzx9Hc6xik2HqgHaEK?pid=Api&P=0&h=180",
+            source: "Liputan6",
+            time: "1 hari lalu",
         },
         {
             id: 4,
             title: "Kedatangan Valen di Gedung Negara Grahadi Surabaya",
             summary: "Masyarakat diminta waspada",
-            source: "Liputan6",
-            time: "2 hari lalu",
             category: "Penyambutan Valen",
             image: "https://tse2.mm.bing.net/th?id=OIF.edBe%2bI0jCQH1NDoK9pnDlA&pid=Api&P=0&h=180",
+            source: "Liputan6",
+            time: "2 hari lalu",
         },
         {
             id: 5,
             title: "IHSG Dibuka Menguat",
             summary: "Sentimen global dorong pasar saham",
-            source: "Liputan6",
-            time: "3 hari lalu",
             category: "Ekonomi",
             image: "https://tse1.mm.bing.net/th/id/OIP.A8Sgv1xgElQgdobody3C_wHaEK?pid=Api&P=0&h=180",
+            source: "Liputan6",
+            time: "3 hari lalu",
         },
         {
             id: 6,
             title: "Wisata Alam Jadi Tren 2026",
             summary: "Liburan ke alam makin diminati",
-            source: "Liputan6",
-            time: "4 hari lalu",
             category: "Lifestyle",
             image: "https://tse1.mm.bing.net/th/id/OIP.nWtSnA2I-xpYfWsITFs0UAAAAA?pid=Api&P=0&h=180",
+            source: "Liputan6",
+            time: "4 hari lalu",
         }
     ];
 
@@ -64,7 +64,7 @@ import { Row, Col, Card } from "react-bootstrap";
             return searchMatch && categoryMatch;
         });
 
-        if (filtered.length === 0) return <p>Berita tidak ditemukan</p>;
+        if (filtered.length === 0) return <p>Berita ditemukan</p>;
 
         const headline = filtered[0];
 
@@ -72,7 +72,7 @@ import { Row, Col, Card } from "react-bootstrap";
         <>
         <Card className="mb-4 border-0">
             <Card.Img src={headline.image} />
-                 <Card.ImgOverlay className="bg-dark bg-opacity d-flex flex-column justify-content-end text-white">
+                 <Card.ImgOverlay className="headline-overlay d-flex flex-colom justfy-content-end">
                     <small>{headline.source} . {headline.time}</small>
                       <h3 className="fw-bold">{headline.title}</h3>
                       <p>{headline.summary}</p>
@@ -83,7 +83,7 @@ import { Row, Col, Card } from "react-bootstrap";
                     <Card key={news.id} className="mb-3 border-0">
                         <Row className="g-2">
                             <Col xs={4}>
-                              <img src={news.image} className="img-fluid rounded" alt={newa.title} />
+                              <img src={news.image} className="img-fluid rounded" />
                               </Col>
                               <Col xs={8}>
                                 <small className="text-muted">

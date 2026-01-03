@@ -26,9 +26,10 @@ function App ()  {
             <h5 className="fw-bold mb-3">Terpopuler</h5>
             <ol className="popular-list">
                 <li>Harga BBM Naik Awal 2026</li>
+                <li>Kedatangan Valen di Gedung Negara Grahadi Surabaya</li>
+                <li>Teknologi Al Mulai Diterapkan di Sekolah</li>
                 <li>Timnas Indonesia Lolos Final</li>
                 <li>IHSG Dibuka Menguat</li>
-                <li>Teknologi Al di Sekolah</li>
                 <li>Wisata Alam Tren 2026</li>
             </ol>
           </div>

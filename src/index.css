@@ -2,17 +2,31 @@ body {
   background-color: #f8f9fa;
 }
 
-.populer-box {
-  background: white;
-  padding: 15px;
-  border-radius: 6px;
+.card-title {
+  font-size: 1.2rem;
 }
 
-.populer-list li {
-  margin-bottom: 10px;
-  font-weight: 500;
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
-.h6 {
+.headline-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  color: white;
+  padding: 20px;
+}
+
+.headline-overlay h3 {
+  font-size: 1.6rem;
   line-height: 1.3;
+}
+
+.headline-overlay p {
+  font-size: 0.95rem;
 }
