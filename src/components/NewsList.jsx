@@ -4,7 +4,7 @@ import { Row, Col, Card } from "react-bootstrap";
         {
             id: 1,
             title: "Harga BBM Naik Awal Tahun 2026",
-            summary: "Pemerintah menjelaskan alasan penyesuaian harga BMM.",
+            summary: "Pemerintah diperkirakan menaikkan harga BBM di awal tahun 2026. Kenaikan ini berlaku untuk BBM nonsubsidi seperti Pertamax, Pertamax Turbo, dan Dexlite, sementara Pertalite dan Solar subsidi kemungkinan tetap stabil. Kenaikan dipicu oleh penyesuaian harga minyak dunia dan biaya produksi, yang berdampak pada transportasi, logistik, dan harga kebutuhan pokok.",
             category: "Nasional",
             image: "https://tse1.mm.bing.net/th/id/OIP._xYjH-g7ns6MmJ4iekxfCwHaDt?pid=Api&P=0&h=180",
             source: "Liputan6",
@@ -13,7 +13,7 @@ import { Row, Col, Card } from "react-bootstrap";
         {
           id: 2,
             title: "Teknologi Ramah Lingkungan di Indonesia",
-            summary: "Teknologi Al mulai diterapkan di sekolah",
+            summary: "Indonesia gencar terapkan teknologi ramah lingkungan, dari energi tembakau, transportasi listrik, pertanian organik, hingga pengelolaan sampah dan bangunan hijau, untuk kurangi dampak ekologis.",
             category: "Teknologi",
             image: "https://tse1.mm.bing.net/th/id/OIP.CgO_Jqsf0FlhSymboQhxMQHaE7?pid=Api&P=0&h=180",
             source: "Liputan6",
@@ -22,7 +22,7 @@ import { Row, Col, Card } from "react-bootstrap";
         {
             id: 3,
             title: "Timnas Indonesia Lolos Final",
-            summary: "Kemenangan dramastis di semifinal",
+            summary: "Timnas Indonesia berhasil menembus babak final setelah kemenangan impresif di semifinal. Keberhasilan ini disambut antusiasme tinggi dari suporter di seluruh negeri, menambah semangat tim jelang pertandingan puncak.",
             category: "Olahraga",
             image: "https://tse3.mm.bing.net/th/id/OIP.ehgdAR3Nqzx9Hc6xik2HqgHaEK?pid=Api&P=0&h=180",
             source: "Liputan6",
@@ -31,7 +31,7 @@ import { Row, Col, Card } from "react-bootstrap";
         {
             id: 4,
             title: "Kedatangan Valen di Gedung Negara Grahadi Surabaya",
-            summary: "Masyarakat diminta waspada",
+            summary: "Achamad Valen Akbar, runner-up Dangdut Academy 7 (DA7) asal Pamekasan, tiba di Gedung Negars Grahadi, Surabaya, disambut antusias oleh Gubernur Jawa Timur Khofifah Indar Parawansa, Wagub Emil Dadak, dan ratusan warga yang memadati lokasi.",
             category: "Penyambutan Valen",
             image: "https://tse2.mm.bing.net/th?id=OIF.edBe%2bI0jCQH1NDoK9pnDlA&pid=Api&P=0&h=180",
             source: "Liputan6",
@@ -40,7 +40,7 @@ import { Row, Col, Card } from "react-bootstrap";
         {
             id: 5,
             title: "IHSG Dibuka Menguat",
-            summary: "Sentimen global dorong pasar saham",
+            summary:"IHSG dibuka menguat pada perdagangan awal 2026, menguat sekitar 0,5% seiring optimisme investor terhadap pemulihan ekonomi dan kinerja emiten, meski masih ada sentimen dari harga komoditas dan kondisi global.",
             category: "Ekonomi",
             image: "https://tse1.mm.bing.net/th/id/OIP.A8Sgv1xgElQgdobody3C_wHaEK?pid=Api&P=0&h=180",
             source: "Liputan6",
@@ -49,7 +49,7 @@ import { Row, Col, Card } from "react-bootstrap";
         {
             id: 6,
             title: "Wisata Alam Jadi Tren 2026",
-            summary: "Liburan ke alam makin diminati",
+            summary: "Wisata alam diprediksi jadi tren utama 2026, dengan masyarakat semakin antusias menjelajahi destinasi alami, menikmati pengalaman outdoor, dan mendukung pariwisata ramah lingkungan.",
             category: "Lifestyle",
             image: "https://tse1.mm.bing.net/th/id/OIP.nWtSnA2I-xpYfWsITFs0UAAAAA?pid=Api&P=0&h=180",
             source: "Liputan6",
